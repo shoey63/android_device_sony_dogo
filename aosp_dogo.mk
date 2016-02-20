@@ -13,6 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-$(call inherit-product, device/sony/yuga/omni_yuga.mk)
+$(call inherit-product, device/sony/dogo/omni_dogo.mk)
 
 PRODUCT_NAME := aosp_dogo
