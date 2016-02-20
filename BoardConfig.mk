@@ -16,7 +16,7 @@
 include device/sony/fusion3-common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
--include vendor/sony/dogo/BoardConfigVendor.mk
+#-include vendor/sony/dogo/BoardConfigVendor.mk
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := C5502,C5503,C5506,dogo
@@ -25,10 +25,7 @@ TARGET_SPECIFIC_HEADER_PATH += device/sony/dogo/include
 
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/dogo/bluetooth
 
-TARGET_KERNEL_CONFIG := cm_fusion3_dogo_defconfig
-
-# Healthd
-BACKLIGHT_PATH := /sys/class/leds/lm3533-lcd-bl/brightness
+TARGET_KERNEL_CONFIG := omni_fusion3_dogo_defconfig
 
 # Partition information
 BOARD_VOLD_MAX_PARTITIONS := 26
@@ -38,4 +35,6 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x01400000
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1056964608
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 2147483648
 
-BOARD_HARDWARE_CLASS += device/sony/dogo/cmhw
+# TWRP
+TW_THEME := portrait_hdpi
+TW_BRIGHTNESS_PATH := /sys/class/leds/lm3533-lcd-bl/brightness
